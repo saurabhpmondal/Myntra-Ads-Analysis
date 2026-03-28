@@ -1,0 +1,37 @@
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.kpi-row {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px;
+}
+
+.chart-section {
+  background: white;
+  margin: 10px;
+  padding: 15px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+.tab-content {
+  padding: 10px;
+}
