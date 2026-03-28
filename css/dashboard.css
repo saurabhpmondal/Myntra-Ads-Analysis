@@ -1,10 +1,10 @@
-/* ===== DASHBOARD ROOT ===== */
+/* ===== EXISTING DASHBOARD (KEEP CLEAN) ===== */
 
 body {
   background: #f5f6fa;
 }
 
-/* ===== KPI SECTION ===== */
+/* ===== KPI ===== */
 
 .kpi-row,
 .kpi-grid {
@@ -14,7 +14,6 @@ body {
   padding: 12px;
 }
 
-/* Tablet */
 @media (max-width: 900px) {
   .kpi-row,
   .kpi-grid {
@@ -22,15 +21,6 @@ body {
   }
 }
 
-/* Mobile */
-@media (max-width: 500px) {
-  .kpi-row,
-  .kpi-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* KPI CARD */
 .kpi,
 .card {
   background: #ffffff;
@@ -39,61 +29,35 @@ body {
   box-shadow: 0 2px 6px rgba(0,0,0,0.04);
 }
 
-/* KPI TITLE */
-.kpi,
-.card .title {
-  font-size: 12px;
-  color: #666;
-}
-
-/* KPI VALUE */
-.kpi span,
-.card .value {
+.kpi span {
   display: block;
   font-size: 18px;
   font-weight: 600;
   margin-top: 6px;
-  color: #111;
 }
 
-/* ===== CHART SECTION ===== */
+/* ===== CHART ===== */
 
-.chart,
-.chart-section {
+.chart {
   margin: 10px 12px;
   background: #ffffff;
   border-radius: 12px;
   padding: 14px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
 }
 
-/* CHART HEADER */
-.chart-header,
-.chart-controls {
+.chart-header {
   display: flex;
-  align-items: center;
   gap: 10px;
   margin-bottom: 12px;
 }
 
-/* DROPDOWN */
-.chart select {
-  padding: 6px 8px;
-  border-radius: 6px;
-  border: 1px solid #ddd;
-  font-size: 12px;
-}
-
-/* CHART BOX */
 .chart-box {
   height: 260px;
-  border-radius: 10px;
   background: #fafafa;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #999;
-  font-size: 13px;
 }
 
 /* ===== TABS ===== */
@@ -106,23 +70,128 @@ body {
   border-bottom: 1px solid #eee;
 }
 
-.tabs div,
-.tabs span {
-  font-size: 13px;
-  color: #555;
-  cursor: pointer;
-}
-
 .tabs .active {
   color: #ff3f6c;
   border-bottom: 2px solid #ff3f6c;
-  padding-bottom: 6px;
 }
 
-/* ===== CONTENT ===== */
+/* ===================================================== */
+/* ===== FILTER (FINAL — MYNTRA STYLE, SAFE) ===== */
+/* ===================================================== */
 
-.content {
-  padding: 12px;
+.filter-wrapper {
+  position: relative;
+}
+
+/* BUTTON */
+.filter-btn {
+  background: #f1f1f1;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* DROPDOWN PANEL */
+.filter-dropdown {
+  position: absolute;
+  top: 36px;
+  right: 0;
+  width: 700px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 16px;
+  z-index: 100;
+}
+
+/* LEFT OPTIONS */
+.filter-left label {
+  display: block;
   font-size: 13px;
-  color: #444;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* RIGHT CALENDAR */
+.filter-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* CALENDAR */
+.calendar {
+  width: 100%;
+}
+
+.month {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-size: 11px;
+  text-align: center;
+  color: #777;
+  margin-bottom: 6px;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+/* DAY */
+.day {
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* STATES */
+.day:hover {
+  background: #f3f4f6;
+}
+
+.day.selected {
+  background: #6d28d9;
+  color: white;
+}
+
+.day.range {
+  background: #ede9fe;
+}
+
+/* FOOTER */
+.filter-footer {
+  grid-column: span 2;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  font-size: 12px;
+}
+
+.filter-footer button {
+  background: #6d28d9;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+}
+
+/* HIDE */
+.hidden {
+  display: none;
 }
