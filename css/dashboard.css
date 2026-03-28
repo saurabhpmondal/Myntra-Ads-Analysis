@@ -1,0 +1,13 @@
+.chart-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.chart-box {
+  height: 250px;
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
