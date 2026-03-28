@@ -1,11 +1,4 @@
 :root {
-  --bg: #f5f6fa;
-  --card: #ffffff;
   --primary: #ff3f6c;
-  --text: #333;
-  --muted: #888;
-  --border: #e5e7eb;
-  --green: #16a34a;
-  --yellow: #f59e0b;
-  --red: #dc2626;
+  --bg: #f5f6fa;
 }
