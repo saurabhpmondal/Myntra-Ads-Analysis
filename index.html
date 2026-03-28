@@ -22,39 +22,39 @@
     <div class="header-right">
       <input class="search" placeholder="Search Style ID / SKU">
       <button class="btn">Search</button>
+    </div>
+  </div>
 
-      <div class="filter">
-        <div class="filter-btn">This Month ▼</div>
+  <!-- FILTER (LEFT - CORRECT POSITION) -->
+  <div class="filter-bar">
+    <div class="filter-btn">This Month: 01 Mar 2026 to 24 Mar 2026 ▼</div>
 
-        <div class="filter-box hidden">
+    <div class="filter-panel hidden">
 
-          <div class="filter-left">
-            <label><input type="radio"> Custom</label>
-            <label><input type="radio"> Today</label>
-            <label><input type="radio"> Yesterday</label>
-            <label><input type="radio"> Last 7 days</label>
-            <label><input type="radio"> Last Month</label>
-            <label><input type="radio" checked> This Month</label>
-          </div>
+      <div class="filter-left">
+        <label><input type="radio"> Custom</label>
+        <label><input type="radio"> Today</label>
+        <label><input type="radio"> Yesterday</label>
+        <label><input type="radio"> Last 7 days</label>
+        <label><input type="radio"> Last Month</label>
+        <label><input type="radio" checked> This Month</label>
+      </div>
 
-          <div class="filter-right">
-            <div class="calendar">
-              <div class="month">March 2026</div>
-              <div class="days" id="cal1"></div>
-            </div>
-
-            <div class="calendar">
-              <div class="month">April 2026</div>
-              <div class="days" id="cal2"></div>
-            </div>
-          </div>
-
-          <div class="filter-footer">
-            <span>Indian Standard Time (GMT +05:30)</span>
-            <button>Apply</button>
-          </div>
-
+      <div class="filter-right">
+        <div class="calendar">
+          <div class="month">March 2026</div>
+          <div class="days" id="cal1"></div>
         </div>
+
+        <div class="calendar">
+          <div class="month">April 2026</div>
+          <div class="days" id="cal2"></div>
+        </div>
+      </div>
+
+      <div class="filter-footer">
+        <span>Indian Standard Time (GMT +05:30)</span>
+        <button>Apply</button>
       </div>
 
     </div>
@@ -72,14 +72,26 @@
   </div>
 
   <!-- CHART -->
-  <div class="chart">
-    <div class="chart-top">
-      <div class="dropdown" id="metricA">Spend ▼</div>
-      <span>vs</span>
-      <div class="dropdown" id="metricB">Revenue ▼</div>
+  <div class="chart-card">
+
+    <div class="chart-header">
+      <div class="chart-title">Overview Comparison</div>
+
+      <div class="chart-controls">
+        <div class="metric-pill" id="metricA">
+          <span class="dot yellow"></span> Spend ▼
+        </div>
+
+        <span class="vs">VS</span>
+
+        <div class="metric-pill" id="metricB">
+          <span class="dot blue"></span> Revenue ▼
+        </div>
+      </div>
     </div>
 
     <div class="chart-box">Chart will render here</div>
+
   </div>
 
   <!-- TABS -->
