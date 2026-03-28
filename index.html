@@ -1,62 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Myntra Ads Dashboard</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8" />
+<title>Myntra Ads Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <link rel="stylesheet" href="css/reset.css"/>
-  <link rel="stylesheet" href="css/variables.css"/>
-  <link rel="stylesheet" href="css/layout.css"/>
-  <link rel="stylesheet" href="css/components.css"/>
-  <link rel="stylesheet" href="css/dashboard.css"/>
-  <link rel="stylesheet" href="css/reports.css"/>
+<link rel="stylesheet" href="css/reset.css"/>
+<link rel="stylesheet" href="css/variables.css"/>
+<link rel="stylesheet" href="css/layout.css"/>
+<link rel="stylesheet" href="css/components.css"/>
+<link rel="stylesheet" href="css/dashboard.css"/>
 
-  <!-- Chart.js -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header class="header">
-  <h1>Product Listing Ads Reports</h1>
+
+  <div class="header-left">
+    <h1>Product Listing Ads Reports</h1>
+  </div>
 
   <div class="header-right">
-    <input id="productSearch" placeholder="Search Style ID / SKU"/>
-    <button id="searchBtn">Search</button>
-    <div class="date-filter">This Month ▼</div>
+
+    <input type="text" placeholder="Search Style ID / SKU"/>
+    <button>Search</button>
+
+    <!-- DATE FILTER BUTTON -->
+    <div class="date-filter-btn" id="openFilter">
+      This Month: 01 Mar 2026 to 24 Mar 2026 ▼
+    </div>
+
   </div>
+
 </header>
 
-<section class="kpi-row" id="kpiRow"></section>
+<!-- FILTER MODAL -->
+<div class="filter-modal hidden" id="filterModal">
 
-<section class="chart-section">
-  <div class="chart-controls">
-    <select id="metricA"></select>
-    <span>vs</span>
-    <select id="metricB"></select>
+  <div class="filter-box">
+
+    <!-- LEFT -->
+    <div class="filter-left">
+      <label><input type="radio" name="f"/> Custom</label>
+      <label><input type="radio" name="f"/> Today</label>
+      <label><input type="radio" name="f"/> Yesterday</label>
+      <label><input type="radio" name="f"/> Last 7 days</label>
+      <label><input type="radio" name="f"/> Last Month</label>
+      <label><input type="radio" name="f" checked/> This Month</label>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="filter-right">
+
+      <div class="calendar">
+        <div class="month">March 2026</div>
+        <div class="days-grid"></div>
+      </div>
+
+      <div class="calendar">
+        <div class="month">April 2026</div>
+        <div class="days-grid"></div>
+      </div>
+
+    </div>
+
   </div>
 
-  <canvas id="mainChart"></canvas>
-</section>
+  <div class="filter-footer">
+    <span>Indian Standard Time (GMT +05:30)</span>
+    <button id="applyFilter">Apply</button>
+  </div>
 
-<div class="tabs">
-  <button class="tab active" data-tab="campaign">Campaigns</button>
-  <button class="tab" data-tab="daily">Daily View</button>
-  <button class="tab" data-tab="placement">Placement Level</button>
-  <button class="tab" data-tab="reports">Reports</button>
 </div>
 
-<div id="contentArea"></div>
+<!-- KPI -->
+<section class="kpi-row">
+  <div class="kpi-card">Impressions</div>
+  <div class="kpi-card">Clicks</div>
+  <div class="kpi-card">CTR</div>
+  <div class="kpi-card">Units Sold</div>
+  <div class="kpi-card">Revenue</div>
+  <div class="kpi-card">Spend</div>
+  <div class="kpi-card">ROI</div>
+</section>
 
-<div id="productPopup" class="popup hidden"></div>
+<!-- CHART -->
+<section class="chart-section">
 
-<script src="js/app.js"></script>
-<script src="js/ui/dropdown.js"></script>
-<script src="js/ui/tabs.js"></script>
-<script src="js/ui/search.js"></script>
-<script src="js/ui/kpiCards.js"></script>
-<script src="js/ui/chart.js"></script>
+  <div class="chart-controls">
+    <select>
+      <option>Spend</option>
+    </select>
+
+    <span>vs</span>
+
+    <select>
+      <option>Revenue</option>
+    </select>
+  </div>
+
+  <div class="chart-box">Chart will render here</div>
+
+</section>
+
+<!-- TABS -->
+<div class="tabs">
+  <button class="tab active">Campaigns</button>
+  <button class="tab">Daily View</button>
+  <button class="tab">Placement Level</button>
+  <button class="tab">Reports</button>
+</div>
+
+<div class="content">Campaign view</div>
+
+<script src="js/ui/filter.js"></script>
 
 </body>
 </html>
