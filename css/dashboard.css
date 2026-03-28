@@ -1,13 +1,128 @@
-.chart-controls {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
+/* ===== DASHBOARD ROOT ===== */
+
+body {
+  background: #f5f6fa;
 }
 
+/* ===== KPI SECTION ===== */
+
+.kpi-row,
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 12px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .kpi-row,
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .kpi-row,
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* KPI CARD */
+.kpi,
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+/* KPI TITLE */
+.kpi,
+.card .title {
+  font-size: 12px;
+  color: #666;
+}
+
+/* KPI VALUE */
+.kpi span,
+.card .value {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 6px;
+  color: #111;
+}
+
+/* ===== CHART SECTION ===== */
+
+.chart,
+.chart-section {
+  margin: 10px 12px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+/* CHART HEADER */
+.chart-header,
+.chart-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+/* DROPDOWN */
+.chart select {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 12px;
+}
+
+/* CHART BOX */
 .chart-box {
-  height: 250px;
+  height: 260px;
+  border-radius: 10px;
   background: #fafafa;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #999;
+  font-size: 13px;
+}
+
+/* ===== TABS ===== */
+
+.tabs {
+  display: flex;
+  gap: 18px;
+  padding: 10px 12px;
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+.tabs div,
+.tabs span {
+  font-size: 13px;
+  color: #555;
+  cursor: pointer;
+}
+
+.tabs .active {
+  color: #ff3f6c;
+  border-bottom: 2px solid #ff3f6c;
+  padding-bottom: 6px;
+}
+
+/* ===== CONTENT ===== */
+
+.content {
+  padding: 12px;
+  font-size: 13px;
+  color: #444;
 }
