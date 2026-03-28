@@ -8,8 +8,6 @@
 <link rel="stylesheet" href="css/reset.css"/>
 <link rel="stylesheet" href="css/variables.css"/>
 <link rel="stylesheet" href="css/layout.css"/>
-<link rel="stylesheet" href="css/components.css"/>
-<link rel="stylesheet" href="css/dashboard.css"/>
 
 </head>
 
@@ -18,55 +16,49 @@
 <!-- HEADER -->
 <header class="header">
 
-  <div class="header-left">
-    <h1>Product Listing Ads Reports</h1>
-  </div>
+  <h1>Product Listing Ads Reports</h1>
 
   <div class="header-right">
 
     <input type="text" placeholder="Search Style ID / SKU"/>
-    <button>Search</button>
+    <button class="search-btn">Search</button>
 
-    <div class="date-filter-btn" id="openFilter">
-      This Month: 01 Mar 2026 to 24 Mar 2026 ▼
+    <div class="filter-wrapper">
+
+      <div class="date-filter-btn" id="openFilter">
+        This Month: 01 Mar 2026 to 24 Mar 2026 ▼
+      </div>
+
+      <!-- FILTER DROPDOWN -->
+      <div class="filter-dropdown hidden" id="filterModal">
+
+        <div class="filter-left">
+          <label><input type="radio"/> Custom</label>
+          <label><input type="radio"/> Today</label>
+          <label><input type="radio"/> Yesterday</label>
+          <label><input type="radio"/> Last 7 days</label>
+          <label><input type="radio"/> Last Month</label>
+          <label><input type="radio" checked/> This Month</label>
+        </div>
+
+        <div class="filter-right">
+          <div class="calendar" id="cal1"></div>
+          <div class="calendar" id="cal2"></div>
+        </div>
+
+        <div class="filter-footer">
+          <span>Indian Standard Time (GMT +05:30)</span>
+          <button id="applyFilter">Apply</button>
+        </div>
+
+      </div>
+
     </div>
 
   </div>
 
 </header>
 
-<!-- FILTER MODAL -->
-<div class="filter-overlay hidden" id="filterModal">
-
-  <div class="filter-container">
-
-    <!-- LEFT -->
-    <div class="filter-left">
-      <label><input type="radio" name="f"/> Custom</label>
-      <label><input type="radio" name="f"/> Today</label>
-      <label><input type="radio" name="f"/> Yesterday</label>
-      <label><input type="radio" name="f"/> Last 7 days</label>
-      <label><input type="radio" name="f"/> Last Month</label>
-      <label><input type="radio" name="f" checked/> This Month</label>
-    </div>
-
-    <!-- RIGHT -->
-    <div class="filter-right">
-      <div class="calendar" id="cal1"></div>
-      <div class="calendar" id="cal2"></div>
-    </div>
-
-    <!-- FOOTER -->
-    <div class="filter-footer">
-      <span>Indian Standard Time (GMT +05:30)</span>
-      <button id="applyFilter">Apply</button>
-    </div>
-
-  </div>
-
-</div>
-
-<!-- KPI -->
 <section class="kpi-row">
   <div class="kpi-card">Impressions</div>
   <div class="kpi-card">Clicks</div>
@@ -77,34 +69,9 @@
   <div class="kpi-card">ROI</div>
 </section>
 
-<!-- CHART -->
 <section class="chart-section">
-
-  <div class="chart-controls">
-    <select>
-      <option>Spend</option>
-    </select>
-
-    <span>vs</span>
-
-    <select>
-      <option>Revenue</option>
-    </select>
-  </div>
-
   <div class="chart-box">Chart will render here</div>
-
 </section>
-
-<!-- TABS -->
-<div class="tabs">
-  <button class="tab active">Campaigns</button>
-  <button class="tab">Daily View</button>
-  <button class="tab">Placement Level</button>
-  <button class="tab">Reports</button>
-</div>
-
-<div class="content">Campaign view</div>
 
 <script src="js/ui/filter.js"></script>
 
