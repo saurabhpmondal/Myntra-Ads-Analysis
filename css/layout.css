@@ -17,71 +17,13 @@ body {
   font-weight: 600;
 }
 
-.header-right {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
+/* FILTER BUTTON */
 .date-filter-btn {
   background: #f3f4f6;
   padding: 6px 12px;
   border-radius: 6px;
   font-size: 13px;
   cursor: pointer;
-}
-
-/* KPI */
-.kpi-row {
-  display: flex;
-  gap: 10px;
-  overflow-x: auto;
-  padding: 12px;
-}
-
-.kpi-card {
-  min-width: 150px;
-  background: white;
-  padding: 12px;
-  border-radius: 12px;
-}
-
-/* CHART */
-.chart-section {
-  margin: 10px 12px;
-  background: white;
-  padding: 14px;
-  border-radius: 12px;
-}
-
-.chart-box {
-  height: 260px;
-  background: #fafafa;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* TABS */
-.tabs {
-  display: flex;
-  gap: 20px;
-  padding: 12px;
-  background: white;
-  border-bottom: 1px solid #eee;
-}
-
-.tab {
-  border: none;
-  background: none;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.tab.active {
-  border-bottom: 2px solid #6d28d9;
-  padding-bottom: 6px;
 }
 
 /* FILTER MODAL */
@@ -108,16 +50,12 @@ body {
 .filter-left {
   width: 180px;
   border-right: 1px solid #eee;
-  padding-right: 10px;
 }
 
 .filter-left label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  display: block;
   padding: 8px 0;
   font-size: 13px;
-  cursor: pointer;
 }
 
 /* RIGHT PANEL */
@@ -132,12 +70,22 @@ body {
 }
 
 .month {
+  text-align: center;
   font-weight: 600;
   margin-bottom: 10px;
-  text-align: center;
 }
 
-/* DAYS GRID */
+/* WEEK HEADER */
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-size: 11px;
+  text-align: center;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+/* GRID */
 .days-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -152,13 +100,13 @@ body {
   cursor: pointer;
 }
 
-/* RANGE COLORS */
+/* STATES */
 .day.selected {
   background: #6d28d9;
   color: white;
 }
 
-.day.in-range {
+.day.range {
   background: #ede9fe;
 }
 
@@ -172,7 +120,6 @@ body {
   justify-content: space-between;
   margin-top: 12px;
   font-size: 12px;
-  color: #666;
 }
 
 .filter-footer button {
@@ -181,7 +128,6 @@ body {
   border: none;
   padding: 6px 14px;
   border-radius: 6px;
-  cursor: pointer;
 }
 
 .hidden {
