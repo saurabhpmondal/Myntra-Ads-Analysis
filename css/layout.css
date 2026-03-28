@@ -1,17 +1,9 @@
 body {
-  font-family: Arial;
   background: var(--bg);
+  font-family: Arial;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  padding: 12px;
-  background: white;
-}
-
-.header-right {
-  display: flex;
-  gap: 8px;
-  align-items: center;
+.app {
+  max-width: 1200px;
+  margin: auto;
 }
