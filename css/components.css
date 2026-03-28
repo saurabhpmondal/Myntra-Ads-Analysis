@@ -1,31 +1,18 @@
 .kpi-card {
-  min-width: 150px;
-  background: var(--card);
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.tab {
-  padding: 8px 14px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.tab.active {
-  border-bottom: 2px solid var(--primary);
-}
-
-.popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  min-width: 140px;
   background: white;
-  padding: 20px;
-  width: 350px;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-.hidden {
-  display: none;
+.kpi-title {
+  font-size: 12px;
+  color: #777;
+}
+
+.kpi-value {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 4px;
 }
