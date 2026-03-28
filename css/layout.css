@@ -65,14 +65,26 @@ body {
   gap: 20px;
 }
 
-.calendar {
-  flex: 1;
+/* CALENDAR HEADER */
+.month-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
 }
 
-.month {
-  text-align: center;
+.nav-btn {
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+.nav-btn:hover {
+  background: #eee;
+}
+
+.month-title {
   font-weight: 600;
-  margin-bottom: 10px;
 }
 
 /* WEEK HEADER */
@@ -96,7 +108,7 @@ body {
   padding: 8px 0;
   text-align: center;
   font-size: 12px;
-  border-radius: 6px;
+  border-radius: 0;
   cursor: pointer;
 }
 
@@ -104,14 +116,28 @@ body {
 .day.selected {
   background: #6d28d9;
   color: white;
+  border-radius: 6px;
 }
 
 .day.range {
   background: #ede9fe;
 }
 
-.day:hover {
-  background: #f3f4f6;
+.day.range-start {
+  background: #6d28d9;
+  color: white;
+  border-radius: 6px 0 0 6px;
+}
+
+.day.range-end {
+  background: #6d28d9;
+  color: white;
+  border-radius: 0 6px 6px 0;
+}
+
+.day.disabled {
+  color: #ccc;
+  pointer-events: none;
 }
 
 /* FOOTER */
