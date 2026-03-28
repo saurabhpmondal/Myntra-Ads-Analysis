@@ -5,8 +5,6 @@
 <title>Myntra Ads Dashboard</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<link rel="stylesheet" href="css/reset.css"/>
-<link rel="stylesheet" href="css/variables.css"/>
 <link rel="stylesheet" href="css/layout.css"/>
 
 </head>
@@ -16,64 +14,95 @@
 <!-- HEADER -->
 <header class="header">
 
-  <h1>Product Listing Ads Reports</h1>
+  <div class="left">
+    <h1>Product Listing Ads Reports</h1>
+  </div>
 
-  <div class="header-right">
+  <div class="right">
 
-    <input type="text" placeholder="Search Style ID / SKU"/>
+    <input class="search" placeholder="Search Style ID / SKU"/>
     <button class="search-btn">Search</button>
 
-    <div class="filter-wrapper">
-
-      <div class="date-filter-btn" id="openFilter">
-        This Month: 01 Mar 2026 to 24 Mar 2026 ▼
-      </div>
-
-      <!-- FILTER DROPDOWN -->
-      <div class="filter-dropdown hidden" id="filterModal">
-
-        <div class="filter-left">
-          <label><input type="radio"/> Custom</label>
-          <label><input type="radio"/> Today</label>
-          <label><input type="radio"/> Yesterday</label>
-          <label><input type="radio"/> Last 7 days</label>
-          <label><input type="radio"/> Last Month</label>
-          <label><input type="radio" checked/> This Month</label>
-        </div>
-
-        <div class="filter-right">
-          <div class="calendar" id="cal1"></div>
-          <div class="calendar" id="cal2"></div>
-        </div>
-
-        <div class="filter-footer">
-          <span>Indian Standard Time (GMT +05:30)</span>
-          <button id="applyFilter">Apply</button>
-        </div>
-
-      </div>
-
+    <div class="filter-btn">
+      This Month: 01 Mar 2026 to 24 Mar 2026 ▼
     </div>
 
   </div>
 
 </header>
 
+<!-- KPI ROW -->
 <section class="kpi-row">
-  <div class="kpi-card">Impressions</div>
-  <div class="kpi-card">Clicks</div>
-  <div class="kpi-card">CTR</div>
-  <div class="kpi-card">Units Sold</div>
-  <div class="kpi-card">Revenue</div>
-  <div class="kpi-card">Spend</div>
-  <div class="kpi-card">ROI</div>
+
+  <div class="card">
+    <div class="title">Impressions</div>
+    <div class="value">—</div>
+  </div>
+
+  <div class="card">
+    <div class="title">Clicks</div>
+    <div class="value">—</div>
+  </div>
+
+  <div class="card">
+    <div class="title">CTR</div>
+    <div class="value">—</div>
+  </div>
+
+  <div class="card">
+    <div class="title">Units Sold</div>
+    <div class="value">—</div>
+  </div>
+
+  <div class="card">
+    <div class="title">Revenue</div>
+    <div class="value">—</div>
+  </div>
+
+  <div class="card">
+    <div class="title">Spend</div>
+    <div class="value">—</div>
+  </div>
+
+  <div class="card">
+    <div class="title">ROI</div>
+    <div class="value">—</div>
+  </div>
+
 </section>
 
-<section class="chart-section">
-  <div class="chart-box">Chart will render here</div>
+<!-- CHART -->
+<section class="chart">
+
+  <div class="chart-header">
+    <select>
+      <option>Spend</option>
+    </select>
+
+    <span>vs</span>
+
+    <select>
+      <option>Revenue</option>
+    </select>
+  </div>
+
+  <div class="chart-box">
+    Chart will render here
+  </div>
+
 </section>
 
-<script src="js/ui/filter.js"></script>
+<!-- TABS -->
+<div class="tabs">
+  <span class="active">Campaigns</span>
+  <span>Daily View</span>
+  <span>Placement Level</span>
+  <span>Reports</span>
+</div>
+
+<div class="content">
+  Campaign view
+</div>
 
 </body>
 </html>
