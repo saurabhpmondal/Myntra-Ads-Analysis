@@ -1,6 +1,7 @@
 import { loadAllData } from "./core/dataLoader.js";
 import { normalizeCDR, normalizeGeneric } from "./core/dataParser.js";
 import { setData } from "./core/dataStore.js";
+import { renderKPIs } from "./ui/kpiCards.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
 
@@ -17,6 +18,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   };
 
   setData(parsed);
+
+  // 👉 Render KPIs
+  renderKPIs();
 
   console.log("Data Loaded:", parsed);
 });
