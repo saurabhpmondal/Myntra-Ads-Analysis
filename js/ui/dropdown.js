@@ -1,37 +1,15 @@
-import { renderChart } from "./chart.js";
+export function initDropdown() {
 
-const metrics = ["Impressions","Clicks","CTR","Units","Revenue","Spend","ROI"];
+  const a = document.querySelector(".metric-a");
+  const b = document.querySelector(".metric-b");
 
-function initDropdowns() {
-  const A = document.getElementById("metricA");
-  const B = document.getElementById("metricB");
+  a.addEventListener("change", () => {
+    [...b.options].forEach(o => o.disabled = false);
 
-  metrics.forEach(m => {
-    A.add(new Option(m, m));
-    B.add(new Option(m, m));
-  });
+    const selected = a.value;
 
-  // default
-  A.value = "Spend";
-  B.value = "Revenue";
-
-  A.addEventListener("change", () => {
-    sync(A, B);
-    renderChart(A.value, B.value);
-  });
-
-  B.addEventListener("change", () => {
-    sync(B, A);
-    renderChart(A.value, B.value);
-  });
-
-  sync(A, B);
-}
-
-function sync(primary, secondary) {
-  [...secondary.options].forEach(opt => {
-    opt.disabled = opt.value === primary.value;
+    [...b.options].forEach(o => {
+      if (o.value === selected) o.disabled = true;
+    });
   });
 }
-
-window.initDropdowns = initDropdowns;
