@@ -1,1 +1,10 @@
-/* empty for now */
+.tabs {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  background: white;
+}
+
+.tab.active {
+  border-bottom: 2px solid var(--primary);
+}
