@@ -27,7 +27,6 @@
     <input type="text" placeholder="Search Style ID / SKU"/>
     <button>Search</button>
 
-    <!-- DATE FILTER BUTTON -->
     <div class="date-filter-btn" id="openFilter">
       This Month: 01 Mar 2026 to 24 Mar 2026 ▼
     </div>
@@ -37,9 +36,9 @@
 </header>
 
 <!-- FILTER MODAL -->
-<div class="filter-modal hidden" id="filterModal">
+<div class="filter-overlay hidden" id="filterModal">
 
-  <div class="filter-box">
+  <div class="filter-container">
 
     <!-- LEFT -->
     <div class="filter-left">
@@ -53,24 +52,16 @@
 
     <!-- RIGHT -->
     <div class="filter-right">
-
-      <div class="calendar">
-        <div class="month">March 2026</div>
-        <div class="days-grid"></div>
-      </div>
-
-      <div class="calendar">
-        <div class="month">April 2026</div>
-        <div class="days-grid"></div>
-      </div>
-
+      <div class="calendar" id="cal1"></div>
+      <div class="calendar" id="cal2"></div>
     </div>
 
-  </div>
+    <!-- FOOTER -->
+    <div class="filter-footer">
+      <span>Indian Standard Time (GMT +05:30)</span>
+      <button id="applyFilter">Apply</button>
+    </div>
 
-  <div class="filter-footer">
-    <span>Indian Standard Time (GMT +05:30)</span>
-    <button id="applyFilter">Apply</button>
   </div>
 
 </div>
