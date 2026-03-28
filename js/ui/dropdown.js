@@ -1,3 +1,5 @@
+import { renderChart } from "./chart.js";
+
 const metrics = ["Impressions","Clicks","CTR","Units","Revenue","Spend","ROI"];
 
 function initDropdowns() {
@@ -9,11 +11,19 @@ function initDropdowns() {
     B.add(new Option(m, m));
   });
 
+  // default
   A.value = "Spend";
   B.value = "Revenue";
 
-  A.addEventListener("change", () => sync(A, B));
-  B.addEventListener("change", () => sync(B, A));
+  A.addEventListener("change", () => {
+    sync(A, B);
+    renderChart(A.value, B.value);
+  });
+
+  B.addEventListener("change", () => {
+    sync(B, A);
+    renderChart(A.value, B.value);
+  });
 
   sync(A, B);
 }
@@ -23,3 +33,5 @@ function sync(primary, secondary) {
     opt.disabled = opt.value === primary.value;
   });
 }
+
+window.initDropdowns = initDropdowns;
