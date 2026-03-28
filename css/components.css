@@ -1,38 +1,12 @@
-/* BUTTONS */
-
-.search-btn {
-  background: #ff3f6c;
+.btn {
+  background: var(--primary);
   color: white;
   border: none;
-  padding: 6px 12px;
-  border-radius: 6px;
-  font-size: 12px;
-}
-
-/* INPUT */
-
-.search-input {
   padding: 6px 10px;
-  border: 1px solid #ddd;
   border-radius: 6px;
-  font-size: 12px;
 }
 
-/* KPI CARD */
-
-.kpi {
-  background: white;
-  padding: 14px;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  font-size: 12px;
-  color: #666;
-}
-
-.kpi span {
-  display: block;
-  margin-top: 6px;
-  font-size: 18px;
-  font-weight: 600;
-  color: #111;
+.search {
+  padding: 6px;
+  border: 1px solid #ddd;
 }
