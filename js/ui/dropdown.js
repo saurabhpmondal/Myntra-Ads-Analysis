@@ -1,15 +1,11 @@
-export function initDropdown() {
+const options = ["Impressions","Clicks","CTR","Units Sold","Revenue","Spend","ROI"];
 
-  const a = document.querySelector(".metric-a");
-  const b = document.querySelector(".metric-b");
-
-  a.addEventListener("change", () => {
-    [...b.options].forEach(o => o.disabled = false);
-
-    const selected = a.value;
-
-    [...b.options].forEach(o => {
-      if (o.value === selected) o.disabled = true;
-    });
-  });
+function createDropdown(el) {
+  el.onclick = () => {
+    const value = prompt("Select Metric:\n" + options.join("\n"));
+    if(value) el.innerText = value + " ▼";
+  };
 }
+
+createDropdown(document.getElementById("metricA"));
+createDropdown(document.getElementById("metricB"));
