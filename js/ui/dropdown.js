@@ -1,11 +1,13 @@
-const options = ["Impressions","Clicks","CTR","Units Sold","Revenue","Spend","ROI"];
+const metrics = ["Impressions","Clicks","CTR","Units Sold","Revenue","Spend","ROI"];
 
-function createDropdown(el) {
+function bindMetric(id) {
+  const el = document.getElementById(id);
+
   el.onclick = () => {
-    const value = prompt("Select Metric:\n" + options.join("\n"));
-    if(value) el.innerText = value + " ▼";
+    const choice = prompt(metrics.join("\n"));
+    if(choice) el.innerHTML = `<span class="dot"></span> ${choice} ▼`;
   };
 }
 
-createDropdown(document.getElementById("metricA"));
-createDropdown(document.getElementById("metricB"));
+bindMetric("metricA");
+bindMetric("metricB");
