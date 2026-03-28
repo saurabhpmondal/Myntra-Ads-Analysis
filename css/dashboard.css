@@ -1,197 +1,40 @@
-/* ===== EXISTING DASHBOARD (KEEP CLEAN) ===== */
-
-body {
-  background: #f5f6fa;
-}
-
-/* ===== KPI ===== */
-
-.kpi-row,
 .kpi-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  gap: 10px;
   padding: 12px;
 }
 
-@media (max-width: 900px) {
-  .kpi-row,
-  .kpi-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.kpi,
-.card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 14px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-}
-
-.kpi span {
-  display: block;
-  font-size: 18px;
-  font-weight: 600;
-  margin-top: 6px;
-}
-
-/* ===== CHART ===== */
-
 .chart {
-  margin: 10px 12px;
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 14px;
-}
-
-.chart-header {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 12px;
+  margin: 10px;
+  background: white;
+  padding: 12px;
 }
 
 .chart-box {
-  height: 260px;
-  background: #fafafa;
-  border-radius: 10px;
+  height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* ===== TABS ===== */
-
-.tabs {
-  display: flex;
-  gap: 18px;
-  padding: 10px 12px;
-  background: #ffffff;
-  border-bottom: 1px solid #eee;
-}
-
-.tabs .active {
-  color: #ff3f6c;
-  border-bottom: 2px solid #ff3f6c;
-}
-
-/* ===================================================== */
-/* ===== FILTER (FINAL — MYNTRA STYLE, SAFE) ===== */
-/* ===================================================== */
+/* FILTER */
 
 .filter-wrapper {
   position: relative;
 }
 
-/* BUTTON */
-.filter-btn {
-  background: #f1f1f1;
-  padding: 6px 10px;
-  border-radius: 6px;
-  font-size: 12px;
-  cursor: pointer;
-}
-
-/* DROPDOWN PANEL */
 .filter-dropdown {
   position: absolute;
-  top: 36px;
+  top: 35px;
   right: 0;
-  width: 700px;
+  width: 650px;
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-  padding: 16px;
   display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: 16px;
-  z-index: 100;
+  grid-template-columns: 150px 1fr;
+  padding: 12px;
 }
 
-/* LEFT OPTIONS */
-.filter-left label {
-  display: block;
-  font-size: 13px;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-
-/* RIGHT CALENDAR */
-.filter-right {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-/* CALENDAR */
-.calendar {
-  width: 100%;
-}
-
-.month {
-  text-align: center;
-  font-weight: 600;
-  margin-bottom: 6px;
-}
-
-.week {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  font-size: 11px;
-  text-align: center;
-  color: #777;
-  margin-bottom: 6px;
-}
-
-.days {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 6px;
-}
-
-/* DAY */
-.day {
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 6px;
-  font-size: 12px;
-  cursor: pointer;
-}
-
-/* STATES */
-.day:hover {
-  background: #f3f4f6;
-}
-
-.day.selected {
-  background: #6d28d9;
-  color: white;
-}
-
-.day.range {
-  background: #ede9fe;
-}
-
-/* FOOTER */
-.filter-footer {
-  grid-column: span 2;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 12px;
-  font-size: 12px;
-}
-
-.filter-footer button {
-  background: #6d28d9;
-  color: white;
-  border: none;
-  padding: 6px 14px;
-  border-radius: 6px;
-}
-
-/* HIDE */
 .hidden {
   display: none;
 }
