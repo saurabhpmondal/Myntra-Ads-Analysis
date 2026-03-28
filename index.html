@@ -11,7 +11,6 @@
 
 <body>
 
-<!-- HEADER -->
 <header class="header">
 
   <div class="header-left">
@@ -23,11 +22,36 @@
     <input class="search" placeholder="Search Style ID / SKU"/>
     <button class="search-btn">Search</button>
 
-    <!-- FILTER -->
     <div class="filter-wrapper">
-      <div class="filter-btn">
+
+      <div class="filter-btn" id="openFilter">
         This Month: 01 Mar 2026 to 24 Mar 2026 ▼
       </div>
+
+      <!-- FILTER DROPDOWN -->
+      <div class="filter-dropdown hidden" id="filterDropdown">
+
+        <div class="filter-left">
+          <label><input type="radio"/> Custom</label>
+          <label><input type="radio"/> Today</label>
+          <label><input type="radio"/> Yesterday</label>
+          <label><input type="radio"/> Last 7 days</label>
+          <label><input type="radio"/> Last Month</label>
+          <label><input type="radio" checked/> This Month</label>
+        </div>
+
+        <div class="filter-right">
+          <div class="calendar" id="cal1"></div>
+          <div class="calendar" id="cal2"></div>
+        </div>
+
+        <div class="filter-footer">
+          <span>Indian Standard Time (GMT +05:30)</span>
+          <button id="applyFilter">Apply</button>
+        </div>
+
+      </div>
+
     </div>
 
   </div>
@@ -37,13 +61,13 @@
 <!-- KPI -->
 <section class="kpi-grid">
 
-  <div class="kpi">Impressions<br><span>—</span></div>
-  <div class="kpi">Clicks<br><span>—</span></div>
-  <div class="kpi">CTR<br><span>—</span></div>
-  <div class="kpi">Units Sold<br><span>—</span></div>
-  <div class="kpi">Revenue<br><span>—</span></div>
-  <div class="kpi">Spend<br><span>—</span></div>
-  <div class="kpi">ROI<br><span>—</span></div>
+  <div class="kpi">Impressions<span>—</span></div>
+  <div class="kpi">Clicks<span>—</span></div>
+  <div class="kpi">CTR<span>—</span></div>
+  <div class="kpi">Units Sold<span>—</span></div>
+  <div class="kpi">Revenue<span>—</span></div>
+  <div class="kpi">Spend<span>—</span></div>
+  <div class="kpi">ROI<span>—</span></div>
 
 </section>
 
@@ -76,10 +100,9 @@
   <div>Reports</div>
 </div>
 
-<!-- CONTENT -->
-<div class="content">
-  Campaign view
-</div>
+<div class="content">Campaign view</div>
+
+<script src="js/ui/filter.js"></script>
 
 </body>
 </html>
