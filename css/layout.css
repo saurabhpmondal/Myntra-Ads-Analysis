@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   background: #f5f6fa;
 }
 
@@ -8,70 +8,75 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 12px 16px;
-  background: white;
+  background: #fff;
   border-bottom: 1px solid #eee;
 }
 
-.left h1 {
-  font-size: 16px;
+.header-left h1 {
+  font-size: 15px;
+  margin: 0;
 }
 
-.right {
+.header-right {
   display: flex;
   gap: 8px;
   align-items: center;
 }
 
 .search {
-  padding: 6px;
+  padding: 6px 8px;
   border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
 .search-btn {
   background: #ff3f6c;
-  color: white;
+  color: #fff;
   border: none;
   padding: 6px 10px;
+  border-radius: 4px;
 }
 
+/* FILTER */
 .filter-btn {
-  background: #f3f4f6;
+  background: #f1f1f1;
   padding: 6px 10px;
   border-radius: 6px;
+  font-size: 12px;
 }
 
-/* KPI */
-.kpi-row {
-  display: flex;
+/* KPI GRID */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 10px;
-  overflow-x: auto;
   padding: 12px;
 }
 
-.card {
-  background: white;
-  padding: 10px;
+.kpi {
+  background: #fff;
+  padding: 12px;
   border-radius: 10px;
-  min-width: 140px;
-}
-
-.title {
   font-size: 12px;
-  color: #666;
+  color: #555;
 }
 
-.value {
+.kpi span {
+  display: block;
   font-size: 18px;
   font-weight: bold;
+  color: #000;
+  margin-top: 4px;
 }
 
 /* CHART */
 .chart {
-  margin: 10px;
-  background: white;
-  padding: 12px;
+  margin: 10px 12px;
+  background: #fff;
   border-radius: 10px;
+  padding: 12px;
 }
 
 .chart-header {
@@ -81,23 +86,23 @@ body {
 }
 
 .chart-box {
-  height: 250px;
+  height: 260px;
+  background: #fafafa;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fafafa;
 }
 
 /* TABS */
 .tabs {
   display: flex;
   gap: 20px;
-  padding: 10px;
-  background: white;
+  padding: 10px 12px;
+  background: #fff;
   border-bottom: 1px solid #eee;
 }
 
-.tabs span {
+.tabs div {
   font-size: 13px;
 }
 
@@ -105,6 +110,7 @@ body {
   border-bottom: 2px solid #ff3f6c;
 }
 
+/* CONTENT */
 .content {
-  padding: 10px;
+  padding: 10px 12px;
 }
