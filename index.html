@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
 <title>Myntra Ads Dashboard</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="css/layout.css"/>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/reports.css">
 
 </head>
 
@@ -19,39 +24,32 @@
 
   <div class="header-right">
 
-    <input class="search" placeholder="Search Style ID / SKU"/>
+    <input class="search-input" placeholder="Search Style ID / SKU">
     <button class="search-btn">Search</button>
 
     <div class="filter-wrapper">
+      <div class="filter-btn">This Month: 01 Mar 2026 to 24 Mar 2026 ▼</div>
 
-      <div class="filter-btn" id="openFilter">
-        This Month: 01 Mar 2026 to 24 Mar 2026 ▼
-      </div>
-
-      <!-- FILTER DROPDOWN -->
-      <div class="filter-dropdown hidden" id="filterDropdown">
-
+      <div class="filter-dropdown hidden">
         <div class="filter-left">
-          <label><input type="radio"/> Custom</label>
-          <label><input type="radio"/> Today</label>
-          <label><input type="radio"/> Yesterday</label>
-          <label><input type="radio"/> Last 7 days</label>
-          <label><input type="radio"/> Last Month</label>
-          <label><input type="radio" checked/> This Month</label>
+          <label><input type="radio"> Custom</label>
+          <label><input type="radio"> Today</label>
+          <label><input type="radio"> Yesterday</label>
+          <label><input type="radio"> Last 7 days</label>
+          <label><input type="radio"> Last Month</label>
+          <label><input type="radio" checked> This Month</label>
         </div>
 
         <div class="filter-right">
-          <div class="calendar" id="cal1"></div>
-          <div class="calendar" id="cal2"></div>
+          <div class="calendar"></div>
+          <div class="calendar"></div>
         </div>
 
         <div class="filter-footer">
           <span>Indian Standard Time (GMT +05:30)</span>
-          <button id="applyFilter">Apply</button>
+          <button>Apply</button>
         </div>
-
       </div>
-
     </div>
 
   </div>
@@ -60,50 +58,49 @@
 
 <!-- KPI -->
 <section class="kpi-grid">
-
-  <div class="kpi">Impressions<span>—</span></div>
-  <div class="kpi">Clicks<span>—</span></div>
-  <div class="kpi">CTR<span>—</span></div>
-  <div class="kpi">Units Sold<span>—</span></div>
-  <div class="kpi">Revenue<span>—</span></div>
-  <div class="kpi">Spend<span>—</span></div>
-  <div class="kpi">ROI<span>—</span></div>
-
+  <div class="kpi">Impressions<span>-</span></div>
+  <div class="kpi">Clicks<span>-</span></div>
+  <div class="kpi">CTR<span>-</span></div>
+  <div class="kpi">Units Sold<span>-</span></div>
+  <div class="kpi">Revenue<span>-</span></div>
+  <div class="kpi">Spend<span>-</span></div>
+  <div class="kpi">ROI<span>-</span></div>
 </section>
 
 <!-- CHART -->
 <section class="chart">
-
   <div class="chart-header">
-    <select>
+    <select class="metric-a">
       <option>Spend</option>
+      <option>Revenue</option>
+      <option>Clicks</option>
+      <option>Impressions</option>
     </select>
 
     <span>vs</span>
 
-    <select>
+    <select class="metric-b">
       <option>Revenue</option>
+      <option>Spend</option>
+      <option>Clicks</option>
+      <option>Impressions</option>
     </select>
   </div>
 
-  <div class="chart-box">
-    Chart will render here
-  </div>
-
+  <div class="chart-box">Chart will render here</div>
 </section>
 
 <!-- TABS -->
 <div class="tabs">
-  <div class="active">Campaigns</div>
-  <div>Daily View</div>
-  <div>Placement Level</div>
-  <div>Reports</div>
+  <div class="tab active">Campaigns</div>
+  <div class="tab">Daily View</div>
+  <div class="tab">Placement Level</div>
+  <div class="tab">Reports</div>
 </div>
 
-<div class="content">Campaign view</div>
+<div class="content">Campaign View</div>
 
-<script src="js/ui/filter.js"></script>
+<script type="module" src="js/app.js"></script>
 
-<script src="js/filter/filterUI.js"></script>
 </body>
 </html>
