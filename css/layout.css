@@ -8,15 +8,9 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 12px 16px;
-  background: #fff;
+  background: white;
   border-bottom: 1px solid #eee;
-}
-
-.header-left h1 {
-  font-size: 15px;
-  margin: 0;
 }
 
 .header-right {
@@ -25,29 +19,100 @@ body {
   align-items: center;
 }
 
+/* SEARCH */
 .search {
-  padding: 6px 8px;
+  padding: 6px;
   border: 1px solid #ddd;
-  border-radius: 4px;
 }
 
 .search-btn {
   background: #ff3f6c;
-  color: #fff;
+  color: white;
   border: none;
   padding: 6px 10px;
-  border-radius: 4px;
 }
 
 /* FILTER */
+.filter-wrapper {
+  position: relative;
+}
+
 .filter-btn {
   background: #f1f1f1;
   padding: 6px 10px;
   border-radius: 6px;
   font-size: 12px;
+  cursor: pointer;
 }
 
-/* KPI GRID */
+/* DROPDOWN */
+.filter-dropdown {
+  position: absolute;
+  top: 34px;
+  right: 0;
+  width: 720px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 16px;
+  z-index: 100;
+}
+
+/* LEFT */
+.filter-left label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+/* RIGHT */
+.filter-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* CALENDAR */
+.month {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-size: 11px;
+  text-align: center;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.day {
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+/* FOOTER */
+.filter-footer {
+  grid-column: span 2;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+/* KPI */
 .kpi-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -56,38 +121,28 @@ body {
 }
 
 .kpi {
-  background: #fff;
+  background: white;
   padding: 12px;
   border-radius: 10px;
   font-size: 12px;
-  color: #555;
 }
 
 .kpi span {
   display: block;
   font-size: 18px;
   font-weight: bold;
-  color: #000;
-  margin-top: 4px;
 }
 
 /* CHART */
 .chart {
-  margin: 10px 12px;
-  background: #fff;
-  border-radius: 10px;
+  margin: 10px;
+  background: white;
   padding: 12px;
-}
-
-.chart-header {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
+  border-radius: 10px;
 }
 
 .chart-box {
-  height: 260px;
-  background: #fafafa;
+  height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,20 +152,15 @@ body {
 .tabs {
   display: flex;
   gap: 20px;
-  padding: 10px 12px;
-  background: #fff;
+  padding: 10px;
+  background: white;
   border-bottom: 1px solid #eee;
-}
-
-.tabs div {
-  font-size: 13px;
 }
 
 .tabs .active {
   border-bottom: 2px solid #ff3f6c;
 }
 
-/* CONTENT */
-.content {
-  padding: 10px 12px;
+.hidden {
+  display: none;
 }
