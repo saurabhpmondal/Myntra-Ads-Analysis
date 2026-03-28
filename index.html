@@ -11,57 +11,52 @@
   <link rel="stylesheet" href="css/components.css"/>
   <link rel="stylesheet" href="css/dashboard.css"/>
   <link rel="stylesheet" href="css/reports.css"/>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="header-left">
-      <h1>Product Listing Ads Reports</h1>
-    </div>
+<header class="header">
+  <h1>Product Listing Ads Reports</h1>
 
-    <div class="header-right">
-      <input id="productSearch" type="text" placeholder="Search Style ID / SKU"/>
-      <button id="searchBtn">Search</button>
+  <div class="header-right">
+    <input id="productSearch" placeholder="Search Style ID / SKU"/>
+    <button id="searchBtn">Search</button>
+    <div class="date-filter">This Month ▼</div>
+  </div>
+</header>
 
-      <div class="date-filter" id="dateFilterBtn">
-        This Month ▼
-      </div>
-    </div>
-  </header>
+<section class="kpi-row" id="kpiRow"></section>
 
-  <!-- KPI ROW -->
-  <section class="kpi-row" id="kpiRow"></section>
-
-  <!-- CHART -->
-  <section class="chart-section">
-    <div class="chart-controls">
-      <select id="metricA"></select>
-      <span>vs</span>
-      <select id="metricB"></select>
-    </div>
-    <div class="chart-box">Chart will render here</div>
-  </section>
-
-  <!-- TABS -->
-  <div class="tabs">
-    <button class="tab active" data-tab="campaign">Campaigns</button>
-    <button class="tab" data-tab="daily">Daily View</button>
-    <button class="tab" data-tab="placement">Placement Level</button>
-    <button class="tab" data-tab="reports">Reports</button>
+<section class="chart-section">
+  <div class="chart-controls">
+    <select id="metricA"></select>
+    <span>vs</span>
+    <select id="metricB"></select>
   </div>
 
-  <!-- CONTENT -->
-  <div class="tab-content" id="contentArea"></div>
+  <canvas id="mainChart"></canvas>
+</section>
 
-  <!-- POPUP -->
-  <div class="popup hidden" id="productPopup"></div>
+<div class="tabs">
+  <button class="tab active" data-tab="campaign">Campaigns</button>
+  <button class="tab" data-tab="daily">Daily View</button>
+  <button class="tab" data-tab="placement">Placement Level</button>
+  <button class="tab" data-tab="reports">Reports</button>
+</div>
+
+<div id="contentArea"></div>
+
+<div id="productPopup" class="popup hidden"></div>
 
 <script src="js/app.js"></script>
 <script src="js/ui/dropdown.js"></script>
 <script src="js/ui/tabs.js"></script>
 <script src="js/ui/search.js"></script>
+<script src="js/ui/kpiCards.js"></script>
+<script src="js/ui/chart.js"></script>
 
 </body>
 </html>
