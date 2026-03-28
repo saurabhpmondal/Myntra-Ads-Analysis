@@ -1,18 +1,18 @@
-.kpi-card {
-  min-width: 140px;
+.search-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 6px 10px;
+}
+
+.kpi {
   background: white;
   padding: 12px;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border-radius: 10px;
 }
 
-.kpi-title {
-  font-size: 12px;
-  color: #777;
-}
-
-.kpi-value {
-  font-size: 18px;
-  font-weight: 600;
-  margin-top: 4px;
+.kpi span {
+  display: block;
+  font-weight: bold;
+  margin-top: 5px;
 }
